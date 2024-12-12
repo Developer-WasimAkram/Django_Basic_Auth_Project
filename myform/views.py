@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import RegistrationForm
+from django.http import HttpResponse
 # Create your views here.
 
 def form_view(request):
@@ -12,4 +13,8 @@ def form_view(request):
            return render(request, 'forms/form.html',data)
         
         
-        return render(request, 'forms/form.html',data)
+    return render(request, 'forms/form.html',data)
+
+
+def card(request):
+        return render(request,'data/CARD.json')
